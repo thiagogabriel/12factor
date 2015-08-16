@@ -28,11 +28,11 @@ Los Doce Factores
 ## [IX. Descartabilidad](./disposability)
 ### Maximizar la robustez con un inicio rápido y un cierre elegante
 
-## [X. Dev/prod parity](./dev-prod-parity)
-### Keep development, staging, and production as similar as possible
+## [X. Dev/prod semejantes](./dev-prod-parity)
+### Mantener el desarrollo, el staging, y la producción lo mas parecido posible
 
-## [XI. Logs](./logs)
-### Treat logs as event streams
+## [XI. Registros](./logs)
+### Tratar a registros como flujos de eventos
 
-## [XII. Admin processes](./admin-processes)
-### Run admin/management tasks as one-off processes
+## [XII. Procesos de administración](./admin-processes)
+### Ejecutar tareas de administración/gerencia como procesos únicos
