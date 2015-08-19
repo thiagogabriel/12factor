@@ -17,13 +17,13 @@ Los Doce Factores
 ### Separar estrictamente las etapas de build y ejecutar
 
 ## [VI. Procesos](./processes)
-### Ejecutar el app cómo uno o más procesos sin estado
+### Ejecutar el app como uno o más procesos sin estado
 
 ## [VII. Vinculación de puertos](./port-binding)
 ### Exportar servicios via vinculación de puertos
 
 ## [VIII. Concurrencia](./concurrency)
-### Escalar horizontalmente via el modelo del proceso
+### Escalar horizontalmente via el modelo de procesos
 
 ## [IX. Descartabilidad](./disposability)
 ### Maximizar la robustez con un inicio rápido y un cierre elegante
