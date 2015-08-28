@@ -9,7 +9,7 @@ La **config** del app es todo lo que es probable que varie entre [deploys](./cod
 
 De vez en cuando, los apps guardan la config como constantes en el código. Esto viola al twelve-factor, el que requiere **la separación estricta entre la config y el código**. La config varia bastante trás deploys, el código no.
 
-Una prueba de fuego para saber si un app tiene toda la config correctamente ubicada fuera del código es considerar si el codebase se pudiera publicar como código abierto en cualquier momento, sin comprometer ninguno de los credenciales.
+Una prueba de fuego para saber si un app tiene toda la config correctamente ubicada fuera del código es considerar si el codebase se pudiera publicar como código abierto en cualquier momento, sin comprometer ninguna de las credenciales.
 
 Fíjese que esta definición de "config" **no** incluye config interna de la applicación, como `config/routes.rb` en Rails, o como [módulos de código están conectados](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) en [Spring](http://spring.io/). Este tipo de config no varia trás deploys, así que es mejor que se quede en el código.
 
