@@ -1,18 +1,17 @@
-## I. Codebase
-### Un solo codebase mantenido en control de versiones, muchos deploys
+## I. Base de código
+### Una sola base de código gestionada con control de versiones, y múltiples despliegues
 
-Un app twelve-factor está siempre mantenido en un sistema de control de versiones, como [Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/), o [Subversion](http://subversion.apache.org/). Una copia del codebase se llama el *code repository*, lo que se suele acortar a *code repo* o solo *repo*.
+El código de una aplicación twelve-factor siempre se gestiona con un sistema de control de versiones, como [Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/), o [Subversion](http://subversion.apache.org/). Una copia del código se llama *repositorio de código*, lo que se suele acortar a *repo de código* o *repo* a secas.
 
-Un *codebase* es cualquier repo individual (en un sistema centralizado como Subversion), o cualquier conjunto de repos, los cuales que comparten el mismo commit raíz (en un sistema decentralizado como Git).
+Una *base de código* es cualquier repo individual (en un sistema centralizado como Subversion), o cualquier conjunto de repos que comparten el mismo commit raíz (en un sistema descentralizado como Git).
 
-![A un codebase le corresponde muchos deploys](/images/codebase-deploys.png)
+![A una base de código le corresponden múltiples despliegues](/images/codebase-deploys.png)
 
-Hay siempre una correlación uno-a-uno entre el codebase y el app:
+Hay siempre una correlación uno-a-uno entre el la base de código y la aplicación:
 
-* Si hay más que un codebase, no es un app -- es un sistema distribuido. Cada componente en un sistema distribuido es un app, y cada uno se puede cumplir individualmente con twelver-factor.
-* Si múltiples apps comparten el mismo código, eso viola al twelve-factor. La solución en aquel caso es transformar el código compartido en unas bibliotecas, las que se puede incluir a tráves del [dependency manager](./dependencies).
+* Si hay más que una base de código, no es una aplicación: es un sistema distribuido. Cada componente en un sistema distribuido es una aplicación, y cada una puede cumplir twelve-factor individualmente.
+* Si varias aplicaciones comparten el mismo código, están violando la metodología twelve-factor. La solución en ese caso es transformar el código compartido en librerías que se pueden incluir a tráves del [gestor de dependencias](./dependencies).
 
-Hay un solo codebase por cada app, pero habrán múltiples deploys por cada app. Un *deploy* es una instancia del app que está en marcha. Esto suele ser una página en producción, y uno o más páginas en staging. Adicionalmente, cada desarrollador tiene una copia en marcha del app en su entorno local, cada uno de los cuales se califica también como un deploy.
+Hay una sola base de código por cada aplicación, pero habrá múltiples despliegues por cada aplicación. Un *despliegue* es una instancia de la aplicación que se está ejecutando. Esto suele ser un sitio web en producción, y uno o más en staging. Además, cada desarrollador puede ejecutar una copia de la aplicación en su entorno de desarrollo local, y esto se considera también un despliegue.
 
-El codebase es lo mismo trás todos los deploys, aunque puede ser que diferentes versiones estén activas en cada deploy. Por ejemplo, tal vez un desarrollador tenga commits aún no lanzado al staging; y el staging tenga algunos commits aún no lanzado al producción. Pero todos comparten el mismo codebase, asi que se pueden identificar como diferentes deploys del mismo app.
-
+La base de código es la misma en todos los despliegues, aunque cada despliegue puede tener activa una versión diferente. Por ejemplo, un desarrollador puede tener commits aún no desplegados en staging, y el entorno de staging puede tener commits aún no desplegados en producción. Sin embargo todos comparten la misma base de código y pueden considerarse diferentes deploys de la misma aplicación.
